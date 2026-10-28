@@ -1,50 +1,97 @@
-
 # AI Investigation Engine
 
-An AI-powered document investigation system built with Python, FastAPI, Qdrant, Groq, and Streamlit.
+An AI-powered document investigation application developed for the Upgaming Applied AI Engineer technical assignment.
 
-## Features
+**Live Demo:** https://ai-investigation-engine-boka.streamlit.app
+
+## Overview
+
+AI Investigation Engine allows users to upload documents, index their contents, search for relevant evidence, and ask natural-language questions using Retrieval-Augmented Generation (RAG).
+
+The application is deployed on Streamlit Community Cloud.
+
+## Implemented Features
 
 - PDF, TXT, and DOCX document ingestion
+- Text extraction and chunking
 - SHA-256 duplicate detection
-- Semantic search with sentence-transformers
-- Hybrid search using BM25 and Reciprocal Rank Fusion
-- Retrieval-Augmented Generation (RAG)
-- AI-generated answers with source citations
-- Document management through a Streamlit interface
-- Initial retrieval evaluation with Recall@5 and MRR@5
+- Document listing and deletion
+- Semantic search with vector embeddings
+- Hybrid retrieval combining semantic similarity and BM25
+- Reciprocal Rank Fusion (RRF)
+- Question answering using Groq-hosted LLMs
+- Evidence citations and retrieved source passages
+- Handling of insufficient evidence
+- Interactive Streamlit user interface
+- FastAPI endpoints available in the source code
 
-## Tech Stack
+## Technology Stack
 
 - Python
-- FastAPI
 - Streamlit
-- Qdrant
-- Sentence Transformers
+- FastAPI
+- Qdrant (local vector storage)
+- Sentence Transformers (all-MiniLM-L6-v2)
+- BM25
 - Groq API
+- OpenAI-compatible Python SDK
 
-## Local Setup
+## Running Locally
 
-1. Create a Python virtual environment.
-2. Install dependencies from `requirements.txt`.
-3. Create a `.env` file containing your Groq API key.
-4. Start the backend:
+Install dependencies:
 
-   `uvicorn main:app --reload`
+```bash
+pip install -r requirements.txt
+```
 
-5. Start the frontend in another terminal:
+Create a `.env` file:
 
-   `streamlit run app.py`
+```env
+GROQ_API_KEY=your_api_key
+GROQ_MODEL=openai/gpt-oss-20b
+```
+
+Start the Streamlit application:
+
+```bash
+python -m streamlit run app.py --server.fileWatcherType none
+```
+
+Alternatively, run the FastAPI backend:
+
+```bash
+uvicorn main:app --reload
+```
+
+FastAPI documentation is available locally at `http://127.0.0.1:8000/docs`.
 
 ## Evaluation
 
-Initial evaluation covers 5 questions. The current document-level Recall@5 and MRR@5 are both 1.0 on 4 answerable questions.
+An initial evaluation pipeline and a small test dataset are included in the repository.
 
-These are preliminary results from a small dataset, not a comprehensive accuracy benchmark.
+The preliminary evaluation covered five questions. Retrieval measurements on four answerable questions produced:
+
+- Recall@5: 1.00
+- MRR@5: 1.00
+
+These preliminary results are based on a small, manually selected dataset and are not representative of large-scale performance.
 
 ## Current Limitations
 
-- Evaluation dataset needs expansion.
-- Large-scale ingestion and testing are pending.
-- Public deployment is pending.
-- Advanced investigation features require further testing.
+- The evaluation dataset has not yet been expanded to the requested 40 questions.
+- The requested 50,000-document scale has not been demonstrated.
+- A comprehensive comparison of multiple retrieval configurations remains incomplete.
+- The deployed application uses local Qdrant storage; data persistence across cloud restarts is not guaranteed.
+- Additional production hardening and automated testing are needed.
+
+## AI-Assisted Development
+
+AI assistance was used for implementation guidance, debugging, architectural planning, and documentation. The application was tested locally and through its deployed interface.
+
+## Submission
+
+**Source Code:** https://github.com/bokakajilashvili/ai-investigation-engine
+
+**Live Application:** https://ai-investigation-engine-boka.streamlit.app
+
+**Status:** Functional prototype demonstrating the core document investigation and RAG workflow.
