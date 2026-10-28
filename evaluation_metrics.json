@@ -1,0 +1,39 @@
+{
+  "total_questions": 5,
+  "completed_questions": 5,
+  "retrieval_evaluated_questions": 4,
+  "recall_at_5": 1.0,
+  "mrr_at_5": 1.0,
+  "per_question": [
+    {
+      "id": "Q001",
+      "category": "simple",
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "Q002",
+      "category": "simple",
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "Q003",
+      "category": "simple",
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "Q004",
+      "category": "cross_document",
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "Q005",
+      "category": "unanswerable",
+      "recall_at_5": null,
+      "reciprocal_rank": null
+    }
+  ]
+}

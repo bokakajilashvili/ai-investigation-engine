@@ -1,0 +1,47 @@
+
+{
+  "dataset_name": "AI Investigation Engine Evaluation",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "Q001",
+      "category": "simple",
+      "question": "What are the main features of the passenger app?",
+      "expected_answer": "Registration, route selection, fare calculation, driver search, payments, reviews, trip history and bonuses.",
+      "expected_sources": ["geo taxi.docx"],
+      "answerable": true
+    },
+    {
+      "id": "Q002",
+      "category": "simple",
+      "question": "What technology is used for the backend of the AI Investigation Engine?",
+      "expected_answer": "FastAPI.",
+      "expected_sources": ["something.txt"],
+      "answerable": true
+    },
+    {
+      "id": "Q003",
+      "category": "simple",
+      "question": "Which database stores document embeddings?",
+      "expected_answer": "Qdrant.",
+      "expected_sources": ["something.txt"],
+      "answerable": true
+    },
+    {
+      "id": "Q004",
+      "category": "cross_document",
+      "question": "What is the taxi application's purpose, and which framework powers the investigation engine backend?",
+      "expected_answer": "The taxi application provides passenger, driver and administration functionality. The investigation engine uses FastAPI.",
+      "expected_sources": ["geo taxi.docx", "something.txt"],
+      "answerable": true
+    },
+    {
+      "id": "Q005",
+      "category": "unanswerable",
+      "question": "What was the taxi company's exact revenue in 2025?",
+      "expected_answer": "Not specified in the documents.",
+      "expected_sources": [],
+      "answerable": false
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+[
+  {
+    "id": "Q001",
+    "category": "simple",
+    "question": "What are the main features of the passenger app?",
+    "expected_answer": "Registration, route selection, fare calculation, driver search, payments, reviews, trip history and bonuses.",
+    "generated_answer": "The passenger app’s core features are:\n\n1. Registration / authentication  \n2. Location detection and route selection / destination setting  \n3. Pre‑calculation of fare  \n4. Driver search and live map display  \n5. Driver profile and rating view  \n6. Payment system (card and cash)  \n7. Driver reviews and ratings  \n8. Trip history and bonus system  \n\nThese items are listed in the project documentation【1】【3】.",
+    "expected_sources": [
+      "geo taxi.docx"
+    ],
+    "retrieved_sources": [
+      "geo taxi.docx",
+      "something.txt"
+    ],
+    "answerable": true,
+    "citations": [
+      {
+        "citation": "[1]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "d500e754-5139-4b95-8d99-a0eabb88a0b2",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      },
+      {
+        "citation": "[2]",
+        "filename": "something.txt",
+        "chunk_id": "b245ba6b-a355-4097-b88d-7de233f90279",
+        "file_id": "96d18747-74d0-49f1-a401-d3f1b30b1ffd"
+      },
+      {
+        "citation": "[3]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "a3bd023e-6355-444a-8a7b-a4539dfa81cc",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      }
+    ],
+    "status": "completed"
+  },
+  {
+    "id": "Q002",
+    "category": "simple",
+    "question": "What technology is used for the backend of the AI Investigation Engine?",
+    "expected_answer": "FastAPI.",
+    "generated_answer": "The backend of the AI Investigation Engine uses **FastAPI**【1】.",
+    "expected_sources": [
+      "something.txt"
+    ],
+    "retrieved_sources": [
+      "something.txt",
+      "geo taxi.docx"
+    ],
+    "answerable": true,
+    "citations": [
+      {
+        "citation": "[1]",
+        "filename": "something.txt",
+        "chunk_id": "b245ba6b-a355-4097-b88d-7de233f90279",
+        "file_id": "96d18747-74d0-49f1-a401-d3f1b30b1ffd"
+      },
+      {
+        "citation": "[2]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "d500e754-5139-4b95-8d99-a0eabb88a0b2",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      },
+      {
+        "citation": "[3]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "a3bd023e-6355-444a-8a7b-a4539dfa81cc",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      }
+    ],
+    "status": "completed"
+  },
+  {
+    "id": "Q003",
+    "category": "simple",
+    "question": "Which database stores document embeddings?",
+    "expected_answer": "Qdrant.",
+    "generated_answer": "The database that stores document embeddings is **Qdrant**【1】.",
+    "expected_sources": [
+      "something.txt"
+    ],
+    "retrieved_sources": [
+      "something.txt",
+      "geo taxi.docx"
+    ],
+    "answerable": true,
+    "citations": [
+      {
+        "citation": "[1]",
+        "filename": "something.txt",
+        "chunk_id": "b245ba6b-a355-4097-b88d-7de233f90279",
+        "file_id": "96d18747-74d0-49f1-a401-d3f1b30b1ffd"
+      },
+      {
+        "citation": "[2]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "d500e754-5139-4b95-8d99-a0eabb88a0b2",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      },
+      {
+        "citation": "[3]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "a3bd023e-6355-444a-8a7b-a4539dfa81cc",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      }
+    ],
+    "status": "completed"
+  },
+  {
+    "id": "Q004",
+    "category": "cross_document",
+    "question": "What is the taxi application's purpose, and which framework powers the investigation engine backend?",
+    "expected_answer": "The taxi application provides passenger, driver and administration functionality. The investigation engine uses FastAPI.",
+    "generated_answer": "The taxi application is a ride‑hailing service that connects passengers with drivers.  It provides features such as user registration, location‑based route selection, fare estimation, driver search with live maps, driver profiles and ratings, payment handling, reviews, and ride history/bonus systems for both passengers and drivers【2】【3】.  \n\nThe investigation engine that powers the backend of this project uses **FastAPI** as its web framework【1】.",
+    "expected_sources": [
+      "geo taxi.docx",
+      "something.txt"
+    ],
+    "retrieved_sources": [
+      "something.txt",
+      "geo taxi.docx"
+    ],
+    "answerable": true,
+    "citations": [
+      {
+        "citation": "[1]",
+        "filename": "something.txt",
+        "chunk_id": "b245ba6b-a355-4097-b88d-7de233f90279",
+        "file_id": "96d18747-74d0-49f1-a401-d3f1b30b1ffd"
+      },
+      {
+        "citation": "[2]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "d500e754-5139-4b95-8d99-a0eabb88a0b2",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      },
+      {
+        "citation": "[3]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "a3bd023e-6355-444a-8a7b-a4539dfa81cc",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      }
+    ],
+    "status": "completed"
+  },
+  {
+    "id": "Q005",
+    "category": "unanswerable",
+    "question": "What was the taxi company's exact revenue in 2025?",
+    "expected_answer": "Not specified in the documents.",
+    "generated_answer": "I’m sorry, but the evidence provided does not contain any information about the taxi company’s revenue for 2025.",
+    "expected_sources": [],
+    "retrieved_sources": [
+      "something.txt",
+      "geo taxi.docx"
+    ],
+    "answerable": false,
+    "citations": [
+      {
+        "citation": "[1]",
+        "filename": "something.txt",
+        "chunk_id": "b245ba6b-a355-4097-b88d-7de233f90279",
+        "file_id": "96d18747-74d0-49f1-a401-d3f1b30b1ffd"
+      },
+      {
+        "citation": "[2]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "d500e754-5139-4b95-8d99-a0eabb88a0b2",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      },
+      {
+        "citation": "[3]",
+        "filename": "geo taxi.docx",
+        "chunk_id": "a3bd023e-6355-444a-8a7b-a4539dfa81cc",
+        "file_id": "6d55bee3-0549-4de6-b6eb-c3ba2d78319b"
+      }
+    ],
+    "status": "completed"
+  }
+]
